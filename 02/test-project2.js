@@ -106,7 +106,6 @@ if (typeof MakeMultiFilter !== 'function') {
 console.log('Test MakeMultiFilter:', p1Message);
 
 // ********************* Test TemplateProcessor
-
 if (typeof TemplateProcessor !== 'function') {
   console.error('TemplateProcessor is not a function', typeof TemplateProcessor);
   p2Message = 'FAILURE';
