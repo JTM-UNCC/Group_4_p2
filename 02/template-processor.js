@@ -17,7 +17,3 @@ class TemplateProcessor {
         return console.log(template);
     }
 }
-
-//var dateTemplate = new TemplateProcessor(template);
-
-//var str = TemplateProcessor.fillIn(dictionary);
