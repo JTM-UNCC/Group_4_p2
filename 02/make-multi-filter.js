@@ -21,7 +21,7 @@ function MakeMultiFilter(originalArray){
         }
 
         return arrayFilterer;
-    }
+    };
     return arrayFilterer;
 }
 
