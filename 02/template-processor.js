@@ -1,8 +1,10 @@
 'use strict';
 class TemplateProcessor {
-    constructor(template){
+    constructor(template) {
+        this.template = template;
     }
-    fillIn(dictionary){
+
+    /*fillIn(dictionary){
         var replace = {
             'x1': "month",
             'x2': "day",
@@ -16,5 +18,16 @@ class TemplateProcessor {
         template =template.replace(/x1|x2|x3/g, matched => replace[matched]);
         template = template.replace("undefined","")
         return template;
+    }  */
+    fillIn(dictionary) {
+        let returnString = this.template;
+        for (const property in dictionary) {
+            if (Object.prototype.hasOwnProperty.call(dictionary, property)) {
+                returnString = returnString.replaceAll("{{" + property + "}}", dictionary[property]);
+            }
+        }
+        const regex = /{{.*}}/g;
+        returnString = returnString.replaceAll(regex, "");
+        return returnString;
     }
 }
